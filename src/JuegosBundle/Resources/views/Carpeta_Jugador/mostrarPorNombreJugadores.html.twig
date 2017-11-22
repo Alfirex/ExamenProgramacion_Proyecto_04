@@ -1,0 +1,12 @@
+{% for fila in TablaJugadores %}
+  <tr>
+     <!-- MODIFICACIÓN 01  -->
+    <td>{{ fila.nombre }}</td>
+    <td>{{ fila.edad }}</td>
+    <td>{{ fila.especializacion }}</td>
+    <td>{{ fila.juego }}</td>
+    <!-- MODIFICACIÓN 02  -->
+    <a href="{{ path('Jugador_IdNombre', {'id': fila.id  }) }}" class="btn btn-primary">ID</a>
+  </tr>
+  <hr>
+{% endfor %}

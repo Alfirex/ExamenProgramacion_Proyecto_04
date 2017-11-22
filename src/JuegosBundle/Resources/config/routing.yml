@@ -1,0 +1,41 @@
+# Default
+juegos_homepage:
+    path:     /
+    defaults: { _controller: JuegosBundle:Default:index }
+juegos_ListarEquipos:
+    path:     /Listar_Equipos
+    defaults: { _controller: JuegosBundle:Default:ListarEquipos }
+
+# Equipos
+Equipo_todosLosEquipos:
+    path:     /Equipos
+    defaults: { _controller: JuegosBundle:Equipo:todosLosEquipos }
+Equipo_infoequipo:
+    path:     /Equipos/infoequipo/{id}
+    defaults: { _controller: JuegosBundle:Equipo:infoequipo }
+Equipo_Crear:
+    path:     /Equipos/crear
+    defaults: { _controller: JuegosBundle:Equipo:crearEquipo }
+Equipo_Actualizar:
+    path:     /Equipos/actualizar/{id}
+    defaults: { _controller: JuegosBundle:Equipo:actualizarEquipo }
+Equipo_Eliminar:
+    path:     /Equipos/eliminar/{id}
+    defaults: { _controller: JuegosBundle:Equipo:eliminarEquipo }
+
+# Jugador
+Jugador_todosLosJugadores:
+    path:     /Jugadores
+    defaults: { _controller: JuegosBundle:Jugador:todosLosJugadores }
+Jugador_Crear:
+    path:     /Jugadores/crear
+    defaults: { _controller: JuegosBundle:Jugador:crearJugador }
+# Examen
+# MODIFICACIÓN 01
+Jugador_Nombre:
+    path:     /Jugadores/buscarPorNombre/{nombre}
+    defaults: { _controller: JuegosBundle:Jugador:buscarJugador, nombre:Paco }
+# MODIFICACIÓN 02
+Jugador_IdNombre:
+    path:     /Jugadores/buscarPorNombreid/{id}
+    defaults: { _controller: JuegosBundle:Jugador:buscarJugadorid}

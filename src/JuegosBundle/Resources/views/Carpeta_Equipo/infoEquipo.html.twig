@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+
+  <h3>Equipo : {{ TablainfoEquipos.nombre }}</h3>
+  <h4>Juego: {{ TablainfoEquipos.Juego }}</h4>
+  <h4>Ranking: {{ TablainfoEquipos.ranking }}</h4>
+  <h4>Integrantes:{{ TablainfoEquipos.integrantes }}</h4>
+  <img src="{{ asset( TablainfoEquipos.foto ) }}" width="300" height="200" alt="">
+  <hr>
+
+  <h3>Integrantes:</h3>
+{% for filaJugador in TablainfoEquipos.jugador %}
+ {{ filaJugador.nombre }}
+
+  <div class="gallery">
+      <img src="" alt="Mntains" width="600" height="400">
+    <div class="desc">
+      <h3>Nombre:</h3>
+      <h5>Apellidos:</h5>
+      <h5>Especialidad: Support</h5>
+    </div>
+  </div>
+{% endfor %}
+  <br>
+{% endblock %}
